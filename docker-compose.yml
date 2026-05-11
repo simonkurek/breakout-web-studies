@@ -5,7 +5,7 @@ services:
     container_name: neon-breaker
     restart: unless-stopped
     ports:
-      - "31337:31337"
+      - "31337:8080"
     healthcheck:
       test: ["CMD", "wget", "-qO-", "http://127.0.0.1:8080/healthz"]
       interval: 30s
