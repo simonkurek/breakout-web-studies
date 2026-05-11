@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="WSI logo">
+  <defs>
+    <linearGradient id="wsiGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#56ffe1"/>
+      <stop offset="100%" stop-color="#ff5cc3"/>
+    </linearGradient>
+    <filter id="wsiGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0c0524" stroke="url(#wsiGrad)" stroke-width="2"/>
+  <g filter="url(#wsiGlow)" opacity="0.45">
+    <text x="32" y="42" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-weight="900" font-size="22" fill="url(#wsiGrad)">WSI</text>
+  </g>
+  <text x="32" y="42" text-anchor="middle" font-family="ui-monospace, Menlo, Consolas, monospace" font-weight="900" font-size="22" fill="url(#wsiGrad)">WSI</text>
+</svg>

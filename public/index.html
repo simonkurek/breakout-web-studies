@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#06010f" />
+  <title>NEON BREAKER — Arkanoid</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="https://www.wsi.edu.pl" target="_blank" rel="noopener noreferrer" aria-label="Strona WSI — wsi.edu.pl">
+      <img src="assets/logo.svg" alt="WSI — Warszawska Szkoła Informatyki" />
+      <span class="brand__text">
+        <span class="brand__title">WSI</span>
+        <span class="brand__sub">wsi.edu.pl</span>
+      </span>
+    </a>
+    <div class="title">
+      <span class="title__glow">NEON</span><span class="title__hl">BREAKER</span>
+    </div>
+    <div class="hint" aria-hidden="true">← →  /  myszka  ·  SPACJA: start/pauza  ·  R: reset</div>
+  </header>
+
+  <main class="stage">
+    <div class="hud">
+      <div class="hud__cell"><span class="hud__label">SCORE</span><span class="hud__value" id="hud-score">0</span></div>
+      <div class="hud__cell"><span class="hud__label">HIGH</span><span class="hud__value" id="hud-high">0</span></div>
+      <div class="hud__cell"><span class="hud__label">LEVEL</span><span class="hud__value" id="hud-level">1</span></div>
+      <div class="hud__cell"><span class="hud__label">LIVES</span><span class="hud__value" id="hud-lives">♥♥♥</span></div>
+      <div class="hud__cell hud__cell--combo"><span class="hud__label">COMBO</span><span class="hud__value" id="hud-combo">×1</span></div>
+    </div>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="800" height="600" aria-label="Plansza gry Breakout"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="overlay__panel">
+          <h1 class="overlay__title">NEON BREAKER</h1>
+          <p class="overlay__sub">Klasyczny arkanoid w nowej skórze</p>
+          <ul class="overlay__list">
+            <li><kbd>←</kbd> <kbd>→</kbd> lub <kbd>myszka</kbd> — sterowanie paletą</li>
+            <li><kbd>Spacja</kbd> — start / pauza / wystrzel kulę</li>
+            <li><kbd>R</kbd> — reset bieżącej rozgrywki</li>
+            <li><kbd>M</kbd> — wycisz dźwięk</li>
+          </ul>
+          <p class="overlay__powerups">Power-upy: <b style="color:#56ffe1">+1 życie</b>, <b style="color:#ffd23f">multi-ball</b>, <b style="color:#9bff6a">szersza paleta</b>, <b style="color:#ff7ad9">wolniejsza kula</b>, <b style="color:#ff5252">laser</b></p>
+          <button class="btn" id="btn-start" type="button">START</button>
+          <p class="overlay__footer">© WSI · <a href="https://www.wsi.edu.pl" target="_blank" rel="noopener noreferrer">wsi.edu.pl</a></p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footbar">
+      <span>Powered by Canvas2D · Vanilla JS</span>
+      <a href="https://www.wsi.edu.pl" target="_blank" rel="noopener noreferrer">www.wsi.edu.pl</a>
+    </footer>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
